@@ -1,0 +1,117 @@
+html {
+    font-size: 100%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: bold;
+}
+
+a:link, a:visited {
+    text-decoration: none;
+    color: inherit;
+}
+
+body {
+    font-family: 'Dosis', sans-serif;
+    text-align: center;
+    height: 100vh;
+    width: 100vw;
+}
+
+body, main, ul, main a, #social li, #source, #edit {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+#social li, #source, #edit {
+    height: 1.75em;
+    width: 1.75em;
+}
+
+#edit, #source, #social {
+    position: fixed;
+}
+
+#edit {
+    top: 1em;
+    left: 1em;
+    cursor: pointer;
+}
+
+#source {
+    bottom: 1em;
+    left: 1em;
+}
+
+#social {
+    bottom: 1em;
+    right: 1em;
+}
+
+ul {
+    list-style-type: none;
+}
+
+bdi {
+    font-size: 1.5em;
+}
+
+main {
+    flex-wrap: wrap;
+    width: 50vw;
+    height: 20vw;
+    font-size: 2vw;
+}
+
+h1 {
+    font-size: 5vw;
+}
+
+h1, p {
+    padding-bottom: 2.5%;
+}
+
+main a {
+    height: 8vw;
+    width: 8vw;
+    padding: 0.5vw;
+    margin: 0.5vw;
+    border: 0.1em solid;
+    border-radius: 10%;
+    font-size: 2vw;
+}
+
+main bdi {
+    font-size: 4vw;
+}
+
+div bdi:hover {
+    font-size: 1.75em;
+}
+
+@media screen and (max-width: 800px) {
+    
+    main {
+        width: 25em;
+        height: 10em;
+        font-size: 1em;
+    }
+
+    h1 {
+        font-size: 2.5em;
+    }
+
+    main a {
+        height: 4em;
+        width: 4em;
+        padding: 0.25em;
+        margin: 0.25em;
+        font-size: 1em;
+    }
+
+    main bdi {
+        font-size: 2em;
+    }
+}
