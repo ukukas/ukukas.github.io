@@ -29,11 +29,11 @@ function getCookie(cname) {
 function checkTheme() {
     "use strict";
     var theme = getCookie("theme");
-    if (theme === null) {
-        setCookie("theme", "light", 365);
-    } else if (theme === "dark") {
+    if (theme === "dark") {
         document.getElementById("dark").rel = "stylesheet";
         document.getElementById("light").rel = "alternate stylesheet";
+    } else {
+        setCookie("theme", "light", 365);
     }
 }
 
