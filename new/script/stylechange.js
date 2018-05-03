@@ -1,12 +1,61 @@
-var button = document.getElementById("edit");
+/*eslint-env browser*/
+
+function setCookie(cname, cvalue, exdays) {
+    "use strict";
+    var d, expires;
+    d = new Date();
+    d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+    expires = "expires=" + d.toUTCString();
+    document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+}
+
+function getCookie(cname) {
+    "use strict";
+    var name, ca, i, c;
+    name = cname + "=";
+    ca = document.cookie.split(';');
+    for (i = 0; i < ca.length; i += 1) {
+        c = ca[i];
+        while (c.charAt(0) === ' ') {
+            c = c.substring(1);
+        }
+        if (c.indexOf(name) === 0) {
+            return c.substring(name.length, c.length);
+        }
+    }
+    return null;
+}
+
+function checkTheme() {
+    "use strict";
+    var theme = getCookie("theme");
+    if (theme === null) {
+        setCookie("theme", "light", 365);
+    } else if (theme === "dark") {
+        document.getElementById("dark").rel = "stylesheet";
+        document.getElementById("light").rel = "alternate stylesheet";
+    }
+}
+
+function swapCookie() {
+    "use strict";
+    var theme = getCookie("theme");
+    if (theme === "light") {
+        setCookie("theme", "dark", 365);
+    } else {
+        setCookie("theme", "light", 365);
+    }
+}
 
 function toggleCSS(id) {
-    var stylesheet = document.getElementById(id);
-    var active = "stylesheet";
-    var disabled = "alternate stylesheet";
-    var current = stylesheet.rel;
+    "use strict";
+    var stylesheet, active, disabled, current;
+    stylesheet = document.getElementById(id);
+    active = "stylesheet";
+    disabled = "alternate stylesheet";
+    current = stylesheet.rel;
 
-    if (current == active) {
+    if (current === active) {
         stylesheet.rel = disabled;
     } else {
         stylesheet.rel = active;
@@ -14,8 +63,12 @@ function toggleCSS(id) {
 }
 
 function swapCSS() {
+    "use strict";
     toggleCSS("light");
     toggleCSS("dark");
+    swapCookie();
 }
 
-button.onclick = function(){ swapCSS(); }
+checkTheme();
+var button = document.getElementById("edit");
+button.onclick = function () { "use strict"; swapCSS(); };
