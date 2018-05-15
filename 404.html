@@ -7,109 +7,79 @@ permalink: /404.html
     <meta charset="utf-8">
     <title>404</title>
     <link type="text/css" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Dosis:400,700">
-    <script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js"
-        integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl"
-        crossorigin="anonymous"></script>
-    <noscript>
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
-    </noscript>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
-
-    /*** BEGIN CSS RESET ***/
-
-        html, body, div, span, main, h1, p, a {
+        html, body, bdi, span, main, h1, p, a {
             margin: 0;
             padding: 0;
             border: 0;
             font-size: 100%;
             font: inherit;
             vertical-align: baseline;
-        }
-        body {
+        } body {
             line-height: 1;
-        }
-
-    /*** END CSS RESET ***/
-        
-        html {
+        } html {
             font-size: 100%;
-        }
-
-        a:link, a:visited {
+        } a:link, a:visited {
             text-decoration: underline;
             color: inherit;
-        }
-        
-        a:hover {
+        } a:hover {
             color: white;
             background-color: black;
-        }
-
-        body, main{
+                } body, main {
+            display: -webkit-box;
+            display: -ms-flexbox;
             display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-
-        body {
+            -webkit-box-align: center;
+                -ms-flex-align: center;
+                    align-items: center;
+            -webkit-box-pack: center;
+                -ms-flex-pack: center;
+                    justify-content: center;
+            -ms-flex-wrap: wrap;
+                flex-wrap: wrap;
+        } body {
             font-family: 'Dosis', sans-serif;
             text-align: center;
             height: 100vh;
             width: 100vw;
-            align-content: center;
+            -ms-flex-line-pack: center;
+                align-content: center;
             background-color: white;
             color: black;
-        }
-
-        h1 {
+        } h1 {
             font-weight: bold;
             font-size: 25vw;
             width: 90vw;
             margin-bottom: 5vw;
-        }
-
-        p {
+        } p {
             font-size: 6.5vw;
             width: 90vw;
             margin-bottom: 2vw;
             line-height: 1.15;
-        }
-
-        @media (min-width: 400px) {
-
+        } @media (min-width: 400px) {
             main {
                 width: 25em;
                 height: 12em;
-            }
-
-            h1 {
+            } h1 {
                 font-size: 7.5em;
                 width: inherit;
                 margin-bottom: 2%;
-            }
-
-            p {
+            } p {
                 font-size: 1.25em;
                 width: inherit;
                 margin-bottom: auto;
             }
-
-        @media (min-width: 800px) {
-
+        } @media (min-width: 800px) {
             main {
                 width: 50vw;
                 height: 24vw;
-            }
-
-            h1 {
+            } h1 {
                 font-size: 15vw;
-            }
-
-            p {
+            } p {
                 font-size: 2.5vw;
-            }
+        }}
     </style>
 </head>
 <body>
@@ -126,36 +96,4 @@ permalink: /404.html
             try looking <a href="new/index.html">here</a>.
         </p>
     </main>
-    <script type="text/javascript">
-        function getCookie(cname) {
-            "use strict";
-            var name, ca, i, c;
-            name = cname + "=";
-            ca = document.cookie.split(';');
-            for (i = 0; i < ca.length; i += 1) {
-                c = ca[i];
-                while (c.charAt(0) === ' ') {
-                    c = c.substring(1);
-                }
-                if (c.indexOf(name) === 0) {
-                    return c.substring(name.length, c.length);
-                }
-            }
-            return null;
-        }
-
-        function checkTheme() {
-            "use strict";
-            var theme, body, a;
-            theme = getCookie("theme");
-            console.log(theme);
-            if (theme === "dark") {
-                console.log("Dark Theme Detected");
-                body = document.getElementByClassName("body");
-                a = document.getElementByClassName("a");
-                body.style.color = "white";
-                body.style.backgroundColor = "black";
-            }
-        }
-    </script>
 </body>
