@@ -8,10 +8,7 @@ a:link, a:visited {
     color: inherit;
 }
 
-a:hover {
-    color: white;
-    background-color: black;
-        } body, main {
+body, main {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -32,8 +29,6 @@ body {
     width: 100vw;
     -ms-flex-line-pack: center;
         align-content: center;
-    background-color: white;
-    color: black;
 }
 
 h1 {
