@@ -148,7 +148,9 @@ permalink: /404.html
             "use strict";
             var theme, body, a;
             theme = getCookie("theme");
+            console.log(theme);
             if (theme === "dark") {
+                console.log("Dark Theme Detected");
                 body = document.getElementByClassName("body");
                 a = document.getElementByClassName("a");
                 body.style.color = "white";
