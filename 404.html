@@ -17,25 +17,8 @@ permalink: /404.html
     <style>
 
     /*** BEGIN CSS RESET ***/
-        
-        /* http://meyerweb.com/eric/tools/css/reset/ 
-           v2.0 | 20110126
-           License: none (public domain)
-        */
 
-        html, body, div, span, applet, object, iframe,
-        h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-        a, abbr, acronym, address, big, cite, code,
-        del, dfn, em, img, ins, kbd, q, s, samp,
-        small, strike, strong, sub, sup, tt, var,
-        b, u, i, center,
-        dl, dt, dd, ol, ul, li,
-        fieldset, form, label, legend,
-        table, caption, tbody, tfoot, thead, tr, th, td,
-        article, aside, canvas, details, embed, 
-        figure, figcaption, footer, header, hgroup, 
-        menu, nav, output, ruby, section, summary,
-        time, mark, audio, video {
+        html, body, div, span, main, h1, p, a {
             margin: 0;
             padding: 0;
             border: 0;
@@ -43,28 +26,8 @@ permalink: /404.html
             font: inherit;
             vertical-align: baseline;
         }
-        /* HTML5 display-role reset for older browsers */
-        article, aside, details, figcaption, figure, 
-        footer, header, hgroup, menu, nav, section {
-            display: block;
-        }
         body {
             line-height: 1;
-        }
-        ol, ul {
-            list-style: none;
-        }
-        blockquote, q {
-            quotes: none;
-        }
-        blockquote:before, blockquote:after,
-        q:before, q:after {
-            content: '';
-            content: none;
-        }
-        table {
-            border-collapse: collapse;
-            border-spacing: 0;
         }
 
     /*** END CSS RESET ***/
@@ -79,8 +42,8 @@ permalink: /404.html
         }
         
         a:hover {
-            color: black;
-            background-color: white;
+            color: white;
+            background-color: black;
         }
 
         body, main{
@@ -96,8 +59,8 @@ permalink: /404.html
             height: 100vh;
             width: 100vw;
             align-content: center;
-            background-color: black;
-            color: white;
+            background-color: white;
+            color: black;
         }
 
         h1 {
@@ -163,4 +126,33 @@ permalink: /404.html
             try looking <a href="new/index.html">here</a>.
         </p>
     </main>
+    <script type="text/javascript">
+        function getCookie(cname) {
+            "use strict";
+            var name, ca, i, c;
+            name = cname + "=";
+            ca = document.cookie.split(';');
+            for (i = 0; i < ca.length; i += 1) {
+                c = ca[i];
+                while (c.charAt(0) === ' ') {
+                    c = c.substring(1);
+                }
+                if (c.indexOf(name) === 0) {
+                    return c.substring(name.length, c.length);
+                }
+            }
+            return null;
+        }
+
+        function checkTheme() {
+            "use strict";
+            var theme, body, a;
+            theme = getCookie("theme");
+            if (theme === "dark") {
+                body = document.getElementByClassName("body");
+                a = document.getElementByClassName("a");
+                body.style.color = "white";
+                body.style.backgroundColor = "black";
+        }
+    </script>
 </body>
