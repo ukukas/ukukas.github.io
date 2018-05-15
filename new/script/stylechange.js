@@ -32,6 +32,7 @@ function checkTheme() {
     if (theme === "dark") {
         document.getElementById("dark").rel = "stylesheet";
         document.getElementById("light").rel = "alternate stylesheet";
+        setCookie("theme", "dark", 365);
     } else {
         setCookie("theme", "light", 365);
     }

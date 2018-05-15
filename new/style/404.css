@@ -1,0 +1,71 @@
+html {
+    font-size: 100%;
+}
+
+a:link, a:visited {
+    text-decoration: underline;
+    color: inherit;
+}
+
+body, main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+body {
+    font-family: 'Dosis', sans-serif;
+    text-align: center;
+    height: 100vh;
+    width: 100vw;
+    align-content: center;
+}
+
+h1 {
+    font-weight: bold;
+    font-size: 25vw;
+    width: 90vw;
+    margin-bottom: 5vw;
+}
+
+p {
+    font-size: 6.5vw;
+    width: 90vw;
+    margin-bottom: 2vw;
+    line-height: 1.15;
+}
+
+@media (min-width: 400px) {
+    
+    main {
+        width: 25em;
+        height: 12em;
+    }
+
+    h1 {
+        font-size: 7.5em;
+        width: inherit;
+        margin-bottom: 2%;
+    }
+    
+    p {
+        font-size: 1.25em;
+        width: inherit;
+        margin-bottom: auto;
+    }
+    
+@media (min-width: 800px) {
+    
+    main {
+        width: 50vw;
+        height: 24vw;
+    }
+
+    h1 {
+        font-size: 15vw;
+    }
+    
+    p {
+        font-size: 2.5vw;
+    }
