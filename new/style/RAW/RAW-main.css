@@ -36,7 +36,7 @@ h1 {
     font-size: 17.5vw
 }
 
-h2 {
+#tagline {
     font-size: 7.5vw;
 }
 
@@ -71,7 +71,7 @@ div .icon:hover {
     font-size: 10vw;
 }
 
-h1, h2, nav {
+h1, #tagline, nav {
     margin-bottom: 2.5vw;
 }
 
@@ -87,7 +87,7 @@ h1, h2, nav {
         font-size: 2.5em;
     }
     
-    h2 {
+    #tagline {
         font-size: 1em;
     }
 
@@ -104,11 +104,11 @@ h1, h2, nav {
         font-size: 2em;
     }
     
-    h1, h2 {
+    h1, #tagline {
         padding-bottom: 2.5%;
     }
     
-    h1, h2, nav {
+    h1, #tagline, nav {
         margin-bottom: auto;
     }
 
@@ -156,7 +156,7 @@ h1, h2, nav {
         font-size: 5vw;
     }
     
-    h2 {
+    #tagline {
         font-size: 2vw;
     }
 

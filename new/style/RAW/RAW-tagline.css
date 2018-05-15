@@ -1,4 +1,4 @@
-h2:before {
+#tagline:before {
     content: "Developing full-stack developer";
     animation: tagline 30s infinite;
 }
