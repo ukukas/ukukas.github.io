@@ -1,0 +1,13 @@
+body {
+    background-color: black;
+    color: whitesmoke;
+}
+
+main a:hover {
+    color: black;
+    background-color: whitesmoke;
+}
+
+main a {
+    border-color: whitesmoke;
+}
