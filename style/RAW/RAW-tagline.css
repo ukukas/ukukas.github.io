@@ -1,12 +1,12 @@
 #tagline:before {
-    content: "Data Science Specialist at Tufts University";
+    content: "Senior Data Scientist at Tufts University";
     animation: tagline 30s infinite;
 }
 
 @keyframes tagline {
     0% {opacity: 1;}
     15% {opacity: 1;}
-    19.99% {opacity: 0; content: "Data Science Specialist at Tufts University"}
+    19.99% {opacity: 0; content: "Senior Data Scientist at Tufts University"}
     20% {opacity: 0; content: "Transportation nerd and remote sensing enthusiast";}
     20.01% {opacity: 0;}
     25% {opacity: 1;}
@@ -22,7 +22,7 @@
     75% {opacity: 1;}
     90% {opacity: 1;}
     94.99% {opacity: 0; content: "Easily excitable by dogs and spatiotemporal analysis"}
-    95% {opacity: 0; content: "Data Science Specialist at Tufts University";}
+    95% {opacity: 0; content: "Senior Data Scientist at Tufts University";}
     95.01% {opacity: 0;}
     100% {opacity: 1;}
 }
